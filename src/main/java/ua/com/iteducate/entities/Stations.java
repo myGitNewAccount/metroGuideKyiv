@@ -48,20 +48,10 @@ public class Stations implements Serializable {
     @Size(max = 100)
     @Column(name = "s_adress")
     private String sAdress;
-    @OneToMany(mappedBy = "sId")
-    private Collection<Places> placesCollection;
-    @OneToMany(mappedBy = "sId")
-    private Collection<Rawplaces> rawplacesCollection;
-    @OneToMany(mappedBy = "sNext")
-    private Collection<Stations> stationsCollection;
-    @JoinColumn(name = "s_next", referencedColumnName = "s_id")
-    @ManyToOne
-    private Stations sNext;
-    @OneToMany(mappedBy = "sPrev")
-    private Collection<Stations> stationsCollection1;
-    @JoinColumn(name = "s_prev", referencedColumnName = "s_id")
-    @ManyToOne
-    private Stations sPrev;
+    @Column(name = "s_next")
+    private Integer sNext;
+    @Column(name = "s_prev")
+    private Integer sPrev;
 
     public Stations() {
     }
@@ -110,55 +100,20 @@ public class Stations implements Serializable {
         this.sAdress = sAdress;
     }
 
-    @XmlTransient
-    public Collection<Places> getPlacesCollection() {
-        return placesCollection;
-    }
-
-    public void setPlacesCollection(Collection<Places> placesCollection) {
-        this.placesCollection = placesCollection;
-    }
-
-    @XmlTransient
-    public Collection<Rawplaces> getRawplacesCollection() {
-        return rawplacesCollection;
-    }
-
-    public void setRawplacesCollection(Collection<Rawplaces> rawplacesCollection) {
-        this.rawplacesCollection = rawplacesCollection;
-    }
-
-    @XmlTransient
-    public Collection<Stations> getStationsCollection() {
-        return stationsCollection;
-    }
-
-    public void setStationsCollection(Collection<Stations> stationsCollection) {
-        this.stationsCollection = stationsCollection;
-    }
-
-    public Stations getSNext() {
+   
+    public Integer getSNext() {
         return sNext;
     }
 
-    public void setSNext(Stations sNext) {
+    public void setSNext(Integer sNext) {
         this.sNext = sNext;
     }
 
-    @XmlTransient
-    public Collection<Stations> getStationsCollection1() {
-        return stationsCollection1;
-    }
-
-    public void setStationsCollection1(Collection<Stations> stationsCollection1) {
-        this.stationsCollection1 = stationsCollection1;
-    }
-
-    public Stations getSPrev() {
+    public Integer getSPrev() {
         return sPrev;
     }
 
-    public void setSPrev(Stations sPrev) {
+    public void setSPrev(Integer sPrev) {
         this.sPrev = sPrev;
     }
 
@@ -184,7 +139,7 @@ public class Stations implements Serializable {
 
     @Override
     public String toString() {
-        return "ua.com.iteducate.entities.Stations[ sId=" + sId + " ]";
+        return "id = " + sId + " name = " + sName;
     }
     
 }

@@ -7,11 +7,15 @@ package test;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
+import ua.com.iteducate.entities.Comments;
 import ua.com.iteducate.entities.Places;
+import ua.com.iteducate.entities.Stations;
 import ua.com.iteducate.entities.Users;
 import ua.com.iteducate.iservices.ICommentsService;
 import ua.com.iteducate.iservices.IPlacesService;
+import ua.com.iteducate.iservices.IStationsService;
 import ua.com.iteducate.iservices.IUsersService;
+import ua.com.iteducate.services.StationsService;
 
 /**
  *
@@ -26,6 +30,7 @@ public class Runner {
         IUsersService usersService = (IUsersService)actx.getBean("UsersService", IUsersService.class);
         IPlacesService placesService = (IPlacesService)actx.getBean("PlacesService", IPlacesService.class);
         ICommentsService commentsService = (ICommentsService)actx.getBean("CommentsService", ICommentsService.class);
+        IStationsService stationsService = (IStationsService)actx.getBean("StationsService");
         
         System.out.println("\n--------------------TESTS--------------------");
         
@@ -38,7 +43,7 @@ public class Runner {
         user.setUPassword("password");
         user.setUPhotoSrc("photoSrc");
         user.setUSurname("Boretskiy");
-        userToUpdate.setUEmail("newEmail");
+        //userToUpdate.setUEmail("newEmail");
         
         //System.out.println(usersService.findByUId(7).getUEmail());
         //System.out.println(usersService.findByUEmailAndUPassword("email", "PASS"));
@@ -47,19 +52,29 @@ public class Runner {
         //usersService.deleteUser(7);
         
         // -------- Places
-        Places place = new Places();
-        place.setPLikesNumber(23423);
+        //Places place = new Places();
+        //place.setPLikesNumber(23423);
         
-        placesService.deletePlace(3);
+        //placesService.deletePlace(3);
         //placesService.insertPlace(place);
         //System.out.println(placesService.findByPId(5).getPLikesNumber());
         
         
         
         // -------- Comments
-        //System.out.println(commentsService.findByCId(1).getText());
+        //System.out.println(commentsService.findByCId(2).getText());
+        //commentsService.deleteByCId(7);
+        //Comments com = new Comments();
+        //com.setCId(8);
+        //com.setPId(1);
+        //com.setText("Newcomment");
+        //com.setUId(1);
+        //commentsService.insert(com);
         
+
         // -------- Stations
-        
+        //Stations station = new Stations();
+        //station = stationsService.findBysId(1);
+        //System.out.println(station);
     }
 }

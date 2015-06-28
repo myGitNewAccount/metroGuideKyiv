@@ -37,12 +37,10 @@ public class Comments implements Serializable {
     @Size(max = 5000)
     @Column(name = "text")
     private String text;
-    @JoinColumn(name = "p_id", referencedColumnName = "p_id")
-    @ManyToOne
-    private Places pId;
-    @JoinColumn(name = "u_id", referencedColumnName = "u_id")
-    @ManyToOne
-    private Users uId;
+    @Column(name = "p_id")
+    private Integer pId;
+    @Column(name = "u_id")
+    private Integer uId;
 
     public Comments() {
     }
@@ -67,19 +65,19 @@ public class Comments implements Serializable {
         this.text = text;
     }
 
-    public Places getPId() {
+    public Integer getPId() {
         return pId;
     }
 
-    public void setPId(Places pId) {
+    public void setPId(Integer pId) {
         this.pId = pId;
     }
 
-    public Users getUId() {
+    public Integer getUId() {
         return uId;
     }
 
-    public void setUId(Users uId) {
+    public void setUId(Integer uId) {
         this.uId = uId;
     }
 
@@ -105,7 +103,7 @@ public class Comments implements Serializable {
 
     @Override
     public String toString() {
-        return "ua.com.iteducate.entities.Comments[ cId=" + cId + " ]";
+        return "cId = " + cId + " text = " + text;
     }
     
 }

@@ -41,7 +41,7 @@ public class Runner {
         user.setUEmail("antony94@ukr.net");
         user.setUName("Antony");
         user.setUPassword("password");
-        user.setUPhotoSrc("photoSrc");
+        user.setUPhotoSrc("photo_source");
         user.setUSurname("Boretskiy");
         //userToUpdate.setUEmail("newEmail");
         
@@ -76,5 +76,6 @@ public class Runner {
         //Stations station = new Stations();
         //station = stationsService.findBysId(1);
         //System.out.println(station);
+        
     }
 }

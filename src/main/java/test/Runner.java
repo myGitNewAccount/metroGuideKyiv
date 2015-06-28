@@ -45,7 +45,7 @@ public class Runner {
         //usersService.deleteUser(7);
         
         // Places
-        //System.out.println(placesService.findByPId(5).getPLikesNumber());
+        //System.out.println(placesService.findByPId(5).getPLikesNumber()); EXAMPLE
         
     }
 }

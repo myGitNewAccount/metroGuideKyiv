@@ -9,6 +9,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 import ua.com.iteducate.entities.Places;
 import ua.com.iteducate.entities.Users;
+import ua.com.iteducate.iservices.ICommentsService;
 import ua.com.iteducate.iservices.IPlacesService;
 import ua.com.iteducate.iservices.IUsersService;
 
@@ -24,6 +25,7 @@ public class Runner {
         ApplicationContext actx = new FileSystemXmlApplicationContext("src/main/resources/app-context.xml");
         IUsersService usersService = (IUsersService)actx.getBean("UsersService", IUsersService.class);
         IPlacesService placesService = (IPlacesService)actx.getBean("PlacesService", IPlacesService.class);
+        ICommentsService commentsService = (ICommentsService)actx.getBean("CommentsService", ICommentsService.class);
         
         System.out.println("\n--------------------TESTS--------------------");
         
@@ -45,7 +47,10 @@ public class Runner {
         //usersService.deleteUser(7);
         
         // Places
-        //System.out.println(placesService.findByPId(5).getPLikesNumber()); EXAMPLE
+        System.out.println(placesService.findByPId(5).getPLikesNumber());
+        
+        // Comments
+        System.out.println(commentsService.findByCId(1).getText());
         
     }
 }

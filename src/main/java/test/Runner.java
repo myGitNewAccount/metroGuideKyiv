@@ -29,7 +29,7 @@ public class Runner {
         
         System.out.println("\n--------------------TESTS--------------------");
         
-        // Users
+        // -------- Users
         Users user = new Users();
         Users userToUpdate = usersService.findByUId(6);
         user.setUAdmin(0);
@@ -46,11 +46,20 @@ public class Runner {
         //usersService.updateUser(userToUpdate);
         //usersService.deleteUser(7);
         
-        // Places
-        System.out.println(placesService.findByPId(5).getPLikesNumber());
+        // -------- Places
+        Places place = new Places();
+        place.setPLikesNumber(23423);
         
-        // Comments
-        System.out.println(commentsService.findByCId(1).getText());
+        placesService.deletePlace(3);
+        //placesService.insertPlace(place);
+        //System.out.println(placesService.findByPId(5).getPLikesNumber());
+        
+        
+        
+        // -------- Comments
+        //System.out.println(commentsService.findByCId(1).getText());
+        
+        // -------- Stations
         
     }
 }

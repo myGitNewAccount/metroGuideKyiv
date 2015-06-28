@@ -16,4 +16,11 @@ import ua.com.iteducate.entities.Places;
 public interface IPlacesService {
     
     public Places findByPId(Integer pId);
+    
+    public void insertPlace(Places place);
+    
+    public void updatePlace(Places place);
+    
+    public void deletePlace(Integer id);
+            
 }

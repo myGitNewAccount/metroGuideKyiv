@@ -5,7 +5,6 @@
  */
 package ua.com.iteducate.repositories;
 
-import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 import ua.com.iteducate.entities.Comments;
 

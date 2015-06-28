@@ -33,4 +33,22 @@ public class PlacesService implements IPlacesService {
         return placesRepository.findByPId(pId);
     }
     
+    @Transactional (readOnly = true)
+    @Override
+    public void insertPlace(Places place){
+        placesRepository.save(place);
+    }
+    
+    @Transactional (readOnly = false)
+    @Override
+    public void updatePlace(Places place){
+        placesRepository.save(place);
+    }
+    
+    @Transactional (readOnly = false)
+    @Override
+    public void deletePlace(Integer id){
+        placesRepository.delete(id);
+    }
+    
 }

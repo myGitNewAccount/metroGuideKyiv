@@ -13,7 +13,7 @@ import ua.com.iteducate.entities.Rawplaces;
  * @author Denis Kochubey
  */
 
-public interface IRawplacesService {
+public interface IRawplacesService { 
     
     public Rawplaces findByRId(Integer rId);
     

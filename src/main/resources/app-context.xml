@@ -31,7 +31,7 @@
    
    <tx:annotation-driven transaction-manager="transactionManager" /> 
    <context:annotation-config/>  
-   <context:component-scan base-package="ua.com.iteducate.services"/>
+   <context:component-scan base-package="ua.com.iteducate"/>
    
   <jpa:repositories base-package="ua.com.iteducate.repositories"
                     entity-manager-factory-ref="emf"

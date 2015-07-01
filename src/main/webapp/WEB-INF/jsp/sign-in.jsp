@@ -20,7 +20,7 @@
         
         <div class="main">
 			<form:form modelAttribute="personAttribute" method="POST" action="index" class="sing-in-window">
-			
+			<form action="sign-in" method="get" class="sing-in-window">
 				<div class="sign-in-logo">Metro Guide</div>
 				<div class="sign-in-textblock">Имя пользователя</div>
 				<input type="text" class="sign-in-field" placeholder="Введите ваш логин">
@@ -28,7 +28,7 @@
 				<input type="text" class="sign-in-field" placeholder="Введите ваш пароль">
 				<div class="sign-in-textblock"><p>Зарегистрироваться</p></div>
 				<input type="button" class="sign-in-button-form" value="Войти">
-			
+			</form>
 			</form:form>
             
 	</div>

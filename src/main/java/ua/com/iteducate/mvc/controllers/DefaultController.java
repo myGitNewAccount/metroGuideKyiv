@@ -32,5 +32,21 @@ public class DefaultController {
     public String index() {
         return "sign-in";
     }
+    /*
+    
+    АНТОН ПИСЮНЧИК
+    
+    @RequestMapping(value="/index", method=RequestMethod.GET)
+    public String greetingForm(Model model) {
+        model.addAttribute("greeting", new Users());
+        return "sign-in";
+    }
+
+    @RequestMapping(value="/index", method=RequestMethod.POST)
+    public String greetingSubmit(@ModelAttribute Users user, Model model) {
+        model.addAttribute("greeting", user);
+        return "index";
+    }
+    */
    
 }

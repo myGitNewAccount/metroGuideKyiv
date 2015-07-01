@@ -16,24 +16,18 @@
 	<link rel="stylesheet" type="text/css" href="${cp}/resources/css/style.css" />
     </head>
     <body class="sign-in-page">
-        
-        
         <div class="main">
-			<form:form modelAttribute="personAttribute" method="POST" action="index" class="sing-in-window">
-			<form action="sign-in" method="get" class="sing-in-window">
+			<div modelAttribute="personAttribute" class="sing-in-window">
+                            <form:form method="POST" action="checkUser">
 				<div class="sign-in-logo">Metro Guide</div>
 				<div class="sign-in-textblock">Имя пользователя</div>
-				<input type="text" class="sign-in-field" placeholder="Введите ваш логин">
+                                <form:input path="uEmail" type="text" class="sign-in-field" placeholder="Введите ваш логин"/>
 				<div class="sign-in-textblock">Пароль</div>
-				<input type="text" class="sign-in-field" placeholder="Введите ваш пароль">
+				<form:input path="uPassword" type="text" class="sign-in-field" placeholder="Введите ваш пароль"/>
 				<div class="sign-in-textblock"><p>Зарегистрироваться</p></div>
-				<input type="button" class="sign-in-button-form" value="Войти">
-			</form>
-			</form:form>
-            
+				<input type="submit" class="sign-in-button-form" value="Войти">         
+                            </form:form>
+			</div>
 	</div>
-        
-        
-        
     </body>
 </html>

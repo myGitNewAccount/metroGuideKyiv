@@ -36,7 +36,7 @@ public class Runner {
         IRawplacesService rawplacesService = (IRawplacesService)actx.getBean("RawplacesService", IRawplacesService.class);
         
         System.out.println("\n--------------------TESTS--------------------");
-        
+        // EXAMPLE OF USING
         // -------- Users
         //Users user = new Users();
         //Users userToUpdate = usersService.findByUId(6);
